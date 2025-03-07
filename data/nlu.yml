@@ -58,7 +58,7 @@ nlu:
 
 - intent: humeur_mauvaise
   examples: |
-    - je suis triste
+    - je suis
     - ça ne va pas
     - je suis déçu
     - journée horrible
