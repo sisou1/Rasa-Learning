@@ -1,0 +1,35 @@
+version: "3.1"
+
+stories:
+
+- story: chemin heureux
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - intent: humeur_bonne
+  - action: utter_heureux
+
+- story: chemin triste 1
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - intent: humeur_mauvaise
+  - action: utter_reconfort
+  - action: utter_aide
+  - intent: affirmation
+  - action: utter_heureux
+
+- story: chemin triste 2
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - intent: humeur_mauvaise
+  - action: utter_reconfort
+  - action: utter_aide
+  - intent: negation
+  - action: utter_au_revoir
+
+- story: météo ensoleillée
+  steps:
+  - intent: meteo_soleil
+  - action: utter_meteo_soleil

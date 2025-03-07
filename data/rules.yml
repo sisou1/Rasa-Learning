@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Dire au revoir lorsque l'utilisateur dit au revoir
+  steps:
+  - intent: au_revoir
+  - action: utter_au_revoir
+
+- rule: Dire "Je suis un bot" lorsque l'utilisateur demande
+  steps:
+  - intent: bot_defi
+  - action: utter_je_suis_un_bot

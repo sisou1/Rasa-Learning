@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+- intent: salutation
+  examples: |
+    - salut
+    - bonjour
+    - coucou
+    - hello
+    - hey
+    - bonsoir
+    - salut tout le monde
+    - salut toi
+    - yo
+    - bonne matinée
+    - bonne soirée
+    - bonne après-midi
+
+- intent: au_revoir
+  examples: |
+    - au revoir
+    - à plus
+    - à bientôt
+    - bye
+    - à la prochaine
+    - bonne journée
+    - bonne soirée
+    - à plus tard
+
+- intent: affirmation
+  examples: |
+    - oui
+    - ouais
+    - bien sûr
+    - exactement
+    - c'est vrai
+    - tout à fait
+
+- intent: negation
+  examples: |
+    - non
+    - pas du tout
+    - jamais
+    - je ne pense pas
+    - pas vraiment
+    - absolument pas
+
+- intent: humeur_bonne
+  examples: |
+    - je vais bien
+    - super
+    - génial
+    - trop content
+    - je suis heureux
+    - tout va bien
+    - parfait
+    - au top
+
+- intent: humeur_mauvaise
+  examples: |
+    - je suis triste
+    - ça ne va pas
+    - je suis déçu
+    - journée horrible
+    - pas en forme
+    - je vais mal
+    - vraiment pas bien
+    - je me sens seul
+    - trop triste
+
+- intent: bot_defi
+  examples: |
+    - es-tu un robot ?
+    - tu es humain ?
+    - est-ce que tu es un bot ?
+    - est-ce que je parle à un humain ?
+    - qui es-tu ?
+
+- intent: meteo_soleil
+  examples: |
+    - il fait beau
+    - il y a du soleil
+    - le temps est ensoleillé
+    - grand soleil aujourd'hui
+    - quelle belle journée
+    - il fait super beau dehors
