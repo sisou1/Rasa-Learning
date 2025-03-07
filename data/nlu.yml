@@ -59,11 +59,6 @@ nlu:
 - intent: humeur_mauvaise
   examples: |
     - je suis
-    - ça ne va pas
-    - je suis déçu
-    - journée horrible
-    - pas en forme
-    - je vais mal
     - vraiment pas bien
     - je me sens seul
     - trop triste
@@ -84,3 +79,18 @@ nlu:
     - grand soleil aujourd'hui
     - quelle belle journée
     - il fait super beau dehors
+
+- intent: reservation_hotel
+  examples: |
+    - Je voudrais réserver une chambre d'hôtel
+    - Je cherche à réserver une chambre
+    - Peux-tu m'aider à réserver un hôtel ?
+    - Je veux une chambre pour ce soir
+    - Réserve un hôtel pour moi
+
+- intent: confirmation_reservation
+  examples: |
+    - C'est réservé ?
+    - Est-ce que ma réservation est confirmée ?
+    - Tu as bien réservé l'hôtel ?
+    - Confirme ma réservation

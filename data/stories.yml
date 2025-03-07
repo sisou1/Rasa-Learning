@@ -33,3 +33,19 @@ stories:
   steps:
   - intent: meteo_soleil
   - action: utter_meteo_soleil
+
+- story: réserver un hôtel
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - intent: reservation_hotel
+  - action: reservation_form
+  - active_loop: reservation_form
+  - action: utter_confirmation_reservation
+
+- story: vérifier la réservation d'hôtel
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - intent: confirmation_reservation
+  - action: utter_confirmation_reservation

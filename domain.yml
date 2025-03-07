@@ -9,6 +9,8 @@ intents:
   - humeur_mauvaise
   - bot_defi
   - meteo_soleil
+  - reservation_hotel
+  - confirmation_reservation
 
 responses:
   utter_salutation:
@@ -31,6 +33,33 @@ responses:
 
   utter_meteo_soleil:
     - text: "Oui, il fait beau aujourd'hui ! Profites-en bien ! ☀️"
+
+  utter_reservation_hotel:
+    - text: "D'accord, je vais réserver une chambre d'hôtel pour vous. Pouvez-vous me donner la date et la durée de votre séjour ?"
+
+  utter_confirmation_reservation:
+    - text: "Votre réservation est confirmée pour le {{date_sejour}} et pour une durée de {{duree_sejour}}. 😊"
+
+slots:
+  date_sejour:
+    type: unfeaturized
+    influence_conversation: false
+  duree_sejour:
+    type: unfeaturized
+    influence_conversation: false
+
+forms:
+  reservation_form:
+    required_slots:
+      - date_sejour
+      - duree_sejour
+
+    # Nous spécifions comment remplir les slots :
+    mappings:
+      date_sejour:
+        - type: from_text
+      duree_sejour:
+        - type: from_text
 
 session_config:
   session_expiration_time: 60

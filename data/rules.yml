@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_defi
   - action: utter_je_suis_un_bot
+
+- rule: Réserver une chambre d'hôtel
+  steps:
+  - intent: reservation_hotel
+  - action: utter_reservation_hotel
+
+- rule: Confirmer la réservation d'hôtel
+  steps:
+  - intent: confirmation_reservation
+  - action: utter_confirmation_reservation
