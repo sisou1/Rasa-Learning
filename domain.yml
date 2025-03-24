@@ -7,10 +7,9 @@ intents:
   - negation
   - humeur_bonne
   - humeur_mauvaise
-  - bot_defi
-  - meteo_soleil
   - reservation_hotel
-  - confirmation_reservation
+  - donner_destination
+  - donner_date
 
 responses:
   utter_salutation:
@@ -28,38 +27,31 @@ responses:
   utter_aide:
     - text: "J'espère que ça ira mieux bientôt. Tu veux en parler ?"
 
-  utter_je_suis_un_bot:
-    - text: "Je suis un bot ! 🤖"
+  utter_demande_destination:
+    - text: "Où souhaitez-vous réserver un hôtel ?"
 
-  utter_meteo_soleil:
-    - text: "Oui, il fait beau aujourd'hui ! Profites-en bien ! ☀️"
-
-  utter_reservation_hotel:
-    - text: "D'accord, je vais réserver une chambre d'hôtel pour vous. Pouvez-vous me donner la date et la durée de votre séjour ?"
+  utter_demande_date:
+    - text: "Pour quelle date souhaitez-vous réserver votre hôtel ?"
 
   utter_confirmation_reservation:
-    - text: "Votre réservation est confirmée pour le {{date_sejour}} et pour une durée de {{duree_sejour}}. 😊"
+    - text: "Vous voulez prendre un hôtel à {destination} le {date_sejour}, c'est bien cela ?"
+
+entities:
+  - destination
+  - date
 
 slots:
-  date_sejour:
-    type: unfeaturized
-    influence_conversation: false
-  duree_sejour:
-    type: unfeaturized
-    influence_conversation: false
-
-forms:
-  reservation_form:
-    required_slots:
-      - date_sejour
-      - duree_sejour
-
-    # Nous spécifions comment remplir les slots :
+  destination:
+    type: text
     mappings:
-      date_sejour:
-        - type: from_text
-      duree_sejour:
-        - type: from_text
+      - type: from_entity
+        entity: destination
+
+  date_sejour:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
 
 session_config:
   session_expiration_time: 60

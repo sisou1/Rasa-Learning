@@ -29,23 +29,15 @@ stories:
   - intent: negation
   - action: utter_au_revoir
 
-- story: météo ensoleillée
-  steps:
-  - intent: meteo_soleil
-  - action: utter_meteo_soleil
-
-- story: réserver un hôtel
+- story: reservation d'hotel complète
   steps:
   - intent: salutation
   - action: utter_salutation
   - intent: reservation_hotel
-  - action: reservation_form
-  - active_loop: reservation_form
+  - action: utter_demande_destination
+  - intent: donner_destination
+  - action: utter_demande_date
+  - intent: donner_date
   - action: utter_confirmation_reservation
-
-- story: vérifier la réservation d'hôtel
-  steps:
-  - intent: salutation
-  - action: utter_salutation
-  - intent: confirmation_reservation
-  - action: utter_confirmation_reservation
+  - intent: affirmation
+  - action: utter_au_revoir

@@ -63,34 +63,116 @@ nlu:
     - je me sens seul
     - trop triste
 
-- intent: bot_defi
-  examples: |
-    - es-tu un robot ?
-    - tu es humain ?
-    - est-ce que tu es un bot ?
-    - est-ce que je parle à un humain ?
-    - qui es-tu ?
-
-- intent: meteo_soleil
-  examples: |
-    - il fait beau
-    - il y a du soleil
-    - le temps est ensoleillé
-    - grand soleil aujourd'hui
-    - quelle belle journée
-    - il fait super beau dehors
-
 - intent: reservation_hotel
   examples: |
-    - Je voudrais réserver une chambre d'hôtel
-    - Je cherche à réserver une chambre
+    - Je veux réserver un hôtel
+    - Je cherche une chambre d'hôtel
     - Peux-tu m'aider à réserver un hôtel ?
-    - Je veux une chambre pour ce soir
-    - Réserve un hôtel pour moi
+    - J'aimerais réserver un hôtel
+    - Trouve-moi un hôtel
 
-- intent: confirmation_reservation
+- intent: donner_destination
   examples: |
-    - C'est réservé ?
-    - Est-ce que ma réservation est confirmée ?
-    - Tu as bien réservé l'hôtel ?
-    - Confirme ma réservation
+    - [Paris](destination)
+    - à [Paris](destination)
+    - Je veux aller à [Lyon](destination)
+    - Réserve à [Marseille](destination)
+    - Un hôtel à [Bordeaux](destination)
+    - J’aimerais séjourner à [Nice](destination)
+    - Trouve-moi un hôtel à [Toulouse](destination)
+    - Un séjour à [Lille](destination)
+    - Direction [Strasbourg](destination)
+    - À [Nantes](destination), s’il te plaît
+    - J’aimerais dormir à [Montpellier](destination)
+    - Un hôtel pour [Rennes](destination)
+    - Réserver une chambre à [Grenoble](destination)
+    - Séjour à [Dijon](destination)
+    - Je veux un hôtel à [Angers](destination)
+    - À [Brest](destination), merci
+    - Prends une chambre à [Le Havre](destination)
+    - À [Reims](destination), si possible
+    - Trouve-moi un séjour à [Saint-Étienne](destination)
+    - Réservation d’hôtel à [Toulon](destination)
+    - Une chambre à [Le Mans](destination)
+    - Destination [Aix-en-Provence](destination)
+    - Réserve-moi un logement à [Clermont-Ferrand](destination)
+    - Où dormir à [Amiens](destination) ?
+    - J’aimerais visiter [Tours](destination) et y dormir
+    - Un hôtel près de [Limoges](destination)
+    - Séjour prévu à [Villeurbanne](destination)
+    - Je veux partir à [Orléans](destination)
+    - Trouve un hôtel à [Metz](destination)
+    - À [Besançon](destination), un hôtel bien situé
+    - J’ai besoin d’un logement à [Perpignan](destination)
+    - Je cherche un hôtel à [Rouen](destination)
+    - Prends une réservation pour [Mulhouse](destination)
+    - Dormir à [Caen](destination)
+    - Voyage prévu à [Nancy](destination)
+    - J’ai un déplacement à [Avignon](destination)
+    - Où loger à [Pau](destination) ?
+    - Un hôtel économique à [Poitiers](destination)
+    - Séjour prévu à [La Rochelle](destination)
+    - Réserver un hôtel à [Calais](destination)
+    - À [Cannes](destination), un hôtel pas cher
+    - Direction [Béziers](destination) pour un week-end
+    - J’aimerais dormir à [Dunkerque](destination)
+    - Une chambre à [Annecy](destination)
+    - Un week-end à [Bayonne](destination)
+    - Je vais à [Valence](destination), trouve un hôtel
+    - J’ai besoin d’un logement à [Saint-Denis](destination)
+    - Prends un hôtel à [Chambéry](destination)
+    - Voyage prévu à [Ajaccio](destination)
+    - J’aimerais réserver à [Biarritz](destination)
+
+- intent: donner_date
+  examples: |
+    - [22/05/23](date)
+    - le [12/03/24](date)
+    - [15/08/25](date)
+    - du [01/07/24](date) au [05/07/24](date)
+    - Je veux réserver pour le [10/06/24](date)
+    - J’arrive le [30/09/23](date)
+    - Le séjour commence le [20/04/25](date)
+    - Réserve pour le [05/11/24](date)
+    - Je pars le [17/01/24](date)
+    - Une chambre pour le [25/12/24](date)
+    - du [05/02/24](date) au [12/02/24](date)
+    - Nuit du [14/07/24](date)
+    - du [09/09/24](date) au [13/09/24](date)
+    - Je compte partir le [01/10/24](date)
+    - Séjour prévu du [15/11/24](date) au [20/11/24](date)
+    - J’ai besoin d’un hôtel le [02/08/24](date)
+    - Nuit du [31/12/24](date) au [01/01/25](date)
+    - J’arriverai le [07/04/25](date)
+    - du [23/06/24](date) au [30/06/24](date)
+    - Chambre pour le [19/09/24](date)
+    - Nuit du [04/05/24](date)
+    - J’arrive à l’hôtel le [29/10/24](date)
+    - du [11/01/25](date) au [18/01/25](date)
+    - Séjour le [06/07/24](date)
+    - Réserve du [12/02/24](date) au [19/02/24](date)
+    - Une nuit pour le [08/06/24](date)
+    - Je viens à l’hôtel le [13/03/25](date)
+    - du [28/09/24](date) au [02/10/24](date)
+    - Un week-end du [09/11/24](date) au [11/11/24](date)
+    - Séjour prévu à partir du [22/07/24](date)
+    - Nuit du [31/05/24](date)
+    - du [16/06/24](date) au [21/06/24](date)
+    - Hôtel pour la nuit du [27/08/24](date)
+    - Réservation pour le [05/10/24](date)
+    - J’ai prévu de partir le [14/12/24](date)
+    - Une réservation du [03/04/24](date) au [06/04/24](date)
+    - J’arrive le [18/07/24](date)
+    - du [07/09/24](date) au [10/09/24](date)
+    - Nuit du [20/01/25](date)
+    - Réserve-moi une chambre pour le [26/11/24](date)
+    - Je viens du [02/03/24](date) au [05/03/24](date)
+    - du [30/04/24](date) au [04/05/24](date)
+    - Nuit du [08/08/24](date)
+    - J’arriverai le [10/02/25](date)
+    - Un séjour du [15/10/24](date) au [20/10/24](date)
+    - Je veux réserver un hôtel pour le [28/06/24](date)
+    - du [13/09/24](date) au [18/09/24](date)
+    - Nuit du [01/12/24](date)
+    - Je reste du [06/05/24](date) au [09/05/24](date)
+    - Hôtel du [21/11/24](date) au [24/11/24](date)
