@@ -52,10 +52,52 @@ nlu:
     - Quels sont les allergènes disponibles ?
     - J'ai besoin des allergènes
     - Peux-tu me donner la liste des allergènes ?
-
+  
 - intent: demander_menu_du_jour
   examples: |
     - Quel est le menu du jour ?
     - Peux-tu me dire ce qu'il y a au menu aujourd'hui ?
     - Montre-moi le menu du jour
     - Quel est le plat du jour ?
+  
+- intent: start_reservation
+  examples: |
+    - Je veux faire une réservation
+    - Je souhaite réserver une table
+    - Réservez une table pour moi
+    - Je veux réserver un restaurant
+    - Fais-moi une réservation
+
+- intent: date_reservation
+  examples: |
+    - Pour quelle date souhaitez-vous réserver ?
+    - Quelle date souhaitez-vous ?
+    - Je veux réserver pour le [25 mars 2025](date)
+    - Réserver pour le [26 mars 2025](date)
+
+- intent: nombre_personne
+  examples: |
+    - Réserver pour [2](nombre) personnes
+    - Nous serons [4](nombre) à table
+
+- intent: nom_reservation
+  examples: |
+    - C'est pour [Jean Dupont](nom)
+
+- intent: numero_de_telephone
+  examples: |
+    - Le numéro est le [0123456789](telephone)
+
+- intent: annuler_reservation
+  examples: |
+    - J'aimerais annuler ma réservation
+    - Annulez ma réservation
+    - Je ne peux plus venir, annulez la réservation
+    - Supprimez ma réservation
+
+- intent: modifier_reservation
+  examples: |
+    - Je voudrais modifier ma réservation
+    - Modifiez ma réservation
+    - Changez la date de ma réservation
+    - Je souhaite changer le nombre de personnes

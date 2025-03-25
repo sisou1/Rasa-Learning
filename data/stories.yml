@@ -5,10 +5,8 @@ stories:
     steps:
       - intent: au_revoir
       - action: utter_au_revoir
-      - intent: salutation
-      - action: utter_salutation
 
-  - story: Faire une reservation
+  - story: Faire une réservation
     steps:
       - intent: salutation
       - action: utter_salutation
@@ -21,9 +19,17 @@ stories:
       - intent: affirmation
       - action: utter_demande_nom
       - intent: nom_reservation
-      - action: utther_demande_num
+      - action: utter_demande_num
       - intent: numero_de_telephone
-      - action: validation
-      - intent: affirmation
-      - action: acction_reservation
-      - action: utther_code_reservation
+      - action: action_reservation
+      - action: utter_code_reservation
+
+  - story: Annuler une réservation
+    steps:
+      - intent: annuler_reservation
+      - action: action_annuler_reservation
+
+  - story: Modifier une réservation
+    steps:
+      - intent: modifier_reservation
+      - action: action_modifier_reservation

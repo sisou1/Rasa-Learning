@@ -1,5 +1,6 @@
 version: "3.1"
 
+
 intents:
   - salutation
   - au_revoir
@@ -7,6 +8,31 @@ intents:
   - negation
   - demander_allergenes
   - demander_menu_du_jour
+  - start_reservation
+  - date_reservation
+  - nombre_personne
+  - nom_reservation
+  - numero_de_telephone
+  - annuler_reservation
+  - modifier_reservation
+
+entities:
+  - date
+  - nombre
+  - nom
+  - telephone
+
+slots:
+  date:
+    type: unfeaturized
+  nombre:
+    type: unfeaturized
+  nom:
+    type: unfeaturized
+  telephone:
+    type: unfeaturized
+  booking_number:
+    type: unfeaturized
 
 responses:
   utter_salutation:
@@ -15,10 +41,31 @@ responses:
   utter_au_revoir:
     - text: "Au revoir ! Passe une bonne journée !"
 
+  utter_demande_date:
+    - text: "Pour quelle date souhaitez-vous réserver ?"
+
+  utter_demande_nombre:
+    - text: "Combien de personnes seront présentes ?"
+
+  utter_demande_nom:
+    - text: "Quel est votre nom ?"
+
+  utter_demande_num:
+    - text: "Quel est votre numéro de téléphone ?"
+
+  utter_code_reservation:
+    - text: "Votre code de réservation est : {booking_number}"
+
+  utter_annulation_confirmation:
+    - text: "Votre réservation a bien été annulée."
+
+  utter_modification_confirmation:
+    - text: "Votre réservation a bien été modifiée."
+
 actions:
   - action_obtenir_allergenes
   - action_obtenir_menu_du_jour
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - action_verification
+  - action_reservation
+  - action_annuler_reservation
+  - action_modifier_reservation
