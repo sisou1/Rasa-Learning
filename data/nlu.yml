@@ -45,42 +45,17 @@ nlu:
     - pas vraiment
     - absolument pas
 
-- intent: humeur_bonne
+- intent: demander_allergenes
   examples: |
-    - je vais bien
-    - super
-    - génial
-    - trop content
-    - je suis heureux
-    - tout va bien
-    - parfait
-    - au top
+    - Quels sont les allergènes ?
+    - Montre-moi la liste des allergènes
+    - Quels sont les allergènes disponibles ?
+    - J'ai besoin des allergènes
+    - Peux-tu me donner la liste des allergènes ?
 
-- intent: humeur_mauvaise
+- intent: demander_menu_du_jour
   examples: |
-    - je suis
-    - ça ne va pas
-    - je suis déçu
-    - journée horrible
-    - pas en forme
-    - je vais mal
-    - vraiment pas bien
-    - je me sens seul
-    - trop triste
-
-- intent: bot_defi
-  examples: |
-    - es-tu un robot ?
-    - tu es humain ?
-    - est-ce que tu es un bot ?
-    - est-ce que je parle à un humain ?
-    - qui es-tu ?
-
-- intent: meteo_soleil
-  examples: |
-    - il fait beau
-    - il y a du soleil
-    - le temps est ensoleillé
-    - grand soleil aujourd'hui
-    - quelle belle journée
-    - il fait super beau dehors
+    - Quel est le menu du jour ?
+    - Peux-tu me dire ce qu'il y a au menu aujourd'hui ?
+    - Montre-moi le menu du jour
+    - Quel est le plat du jour ?

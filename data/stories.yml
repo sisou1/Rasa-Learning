@@ -1,35 +1,29 @@
 version: "3.1"
 
 stories:
+  - story: Demander au revoir
+    steps:
+      - intent: au_revoir
+      - action: utter_au_revoir
+      - intent: salutation
+      - action: utter_salutation
 
-- story: chemin heureux
-  steps:
-  - intent: salutation
-  - action: utter_salutation
-  - intent: humeur_bonne
-  - action: utter_heureux
-
-- story: chemin triste 1
-  steps:
-  - intent: salutation
-  - action: utter_salutation
-  - intent: humeur_mauvaise
-  - action: utter_reconfort
-  - action: utter_aide
-  - intent: affirmation
-  - action: utter_heureux
-
-- story: chemin triste 2
-  steps:
-  - intent: salutation
-  - action: utter_salutation
-  - intent: humeur_mauvaise
-  - action: utter_reconfort
-  - action: utter_aide
-  - intent: negation
-  - action: utter_au_revoir
-
-- story: météo ensoleillée
-  steps:
-  - intent: meteo_soleil
-  - action: utter_meteo_soleil
+  - story: Faire une reservation
+    steps:
+      - intent: salutation
+      - action: utter_salutation
+      - intent: start_reservation
+      - action: utter_demande_date
+      - intent: date_reservation
+      - action: utter_demande_nombre
+      - intent: nombre_personne
+      - action: action_verification
+      - intent: affirmation
+      - action: utter_demande_nom
+      - intent: nom_reservation
+      - action: utther_demande_num
+      - intent: numero_de_telephone
+      - action: validation
+      - intent: affirmation
+      - action: acction_reservation
+      - action: utther_code_reservation

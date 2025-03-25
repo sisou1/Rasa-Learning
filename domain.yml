@@ -5,10 +5,8 @@ intents:
   - au_revoir
   - affirmation
   - negation
-  - humeur_bonne
-  - humeur_mauvaise
-  - bot_defi
-  - meteo_soleil
+  - demander_allergenes
+  - demander_menu_du_jour
 
 responses:
   utter_salutation:
@@ -17,20 +15,9 @@ responses:
   utter_au_revoir:
     - text: "Au revoir ! Passe une bonne journée !"
 
-  utter_heureux:
-    - text: "Super, content de l'entendre ! 😊"
-
-  utter_reconfort:
-    - text: "Oh, désolé d'entendre ça. Qu'est-ce qui ne va pas ? 😟"
-
-  utter_aide:
-    - text: "J'espère que ça ira mieux bientôt. Tu veux en parler ?"
-
-  utter_je_suis_un_bot:
-    - text: "Je suis un bot ! 🤖"
-
-  utter_meteo_soleil:
-    - text: "Oui, il fait beau aujourd'hui ! Profites-en bien ! ☀️"
+actions:
+  - action_obtenir_allergenes
+  - action_obtenir_menu_du_jour
 
 session_config:
   session_expiration_time: 60
