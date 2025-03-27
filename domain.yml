@@ -21,18 +21,41 @@ entities:
   - nombre
   - nom
   - telephone
+  - commentaire
+  - code_reservation
 
 slots:
-  date:
-    type: unfeaturized
-  nombre:
-    type: unfeaturized
-  nom:
-    type: unfeaturized
-  telephone:
-    type: unfeaturized
-  booking_number:
-    type: unfeaturized
+  nom_reservation:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nom
+  numero_de_telephone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: telephone
+  nombre_personne:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nombre
+  date_reservation:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  commentaire:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: commentaire
+  code_reservation:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: code_reservation
+
 
 responses:
   utter_salutation:

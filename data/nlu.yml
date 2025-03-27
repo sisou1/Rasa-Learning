@@ -13,7 +13,6 @@ nlu:
     - salut toi
     - yo
     - bonne matinée
-    - bonne soirée
     - bonne après-midi
 
 - intent: au_revoir
@@ -67,26 +66,121 @@ nlu:
     - Réservez une table pour moi
     - Je veux réserver un restaurant
     - Fais-moi une réservation
+    - J'aimerais réserver une table
+    - Je voudrais une réservation
+    - Organise une réservation pour moi
+    - Réservez-moi une place
+    - Je souhaite une réservation
+    - Pouvez-vous réserver une table pour moi ?
+    - Je voudrais réserver un repas
+    - Réservez une place pour moi
+    - Je veux réserver pour ce soir
+    - J'aimerais une réservation pour deux
+    - Réservez une table pour quatre personnes
+    - J'ai besoin d'une réservation
+    - Peut-on réserver une table pour moi ?
+    - Je veux une réservation pour demain
+    - Réservez-moi une table pour 6
+    - Je souhaite réserver pour le dîner
+    - J'aimerais une table pour trois
+    - Pouvez-vous me réserver une place ?
+    - Réservez une table pour deux, s'il vous plaît
+    - Je voudrais une réservation pour la semaine prochaine
+    - Organisez-moi une réservation pour ce week-end
+    - Je veux une réservation dans votre restaurant
+    - Faites une réservation pour moi
+    - Je cherche à réserver une table
+    - Réservez-moi une table pour ce soir à 20h
+
 
 - intent: date_reservation
   examples: |
-    - Pour quelle date souhaitez-vous réserver ?
-    - Quelle date souhaitez-vous ?
     - Je veux réserver pour le [25 mars 2025](date)
     - Réserver pour le [26 mars 2025](date)
+    - J'aimerais réserver pour le [27 mars 2025](date)
+    - Nous serons là le [28 mars 2025](date)
+    - Pour le [29 mars 2025](date), c'est possible ?
+    - Je souhaite une réservation pour le [30 mars 2025](date)
+    - Réserve-moi une table pour le [31 mars 2025](date)
+    - Le [1er avril 2025](date), est-ce libre ?
+    - Est-ce possible de réserver pour le [2 avril 2025](date) ?
+    - Je voudrais une réservation pour le [3 avril 2025](date)
+    - Pour le [4 avril 2025](date), est-ce disponible ?
+    - Réserve pour le [5 avril 2025](date)
+    - Est-ce que vous avez de la place le [6 avril 2025](date) ?
+    - J'aimerais réserver pour le [7 avril 2025](date)
+    - Vous avez une table le [8 avril 2025](date) ?
+    - Je souhaite réserver pour le [9 avril 2025](date)
+    - Le [10 avril 2025](date), est-ce possible ?
+    - Je voudrais une réservation pour le [11 avril 2025](date)
+    - Je cherche une table pour le [12 avril 2025](date)
 
 - intent: nombre_personne
   examples: |
     - Réserver pour [2](nombre) personnes
     - Nous serons [4](nombre) à table
+    - Pour [5](nombre) personnes, c'est possible ?
+    - Nous serons [3](nombre) ce soir
+    - Réservez pour [6](nombre) personnes
+    - Nous avons [8](nombre) convives
+    - Pour [10](nombre) personnes, est-ce libre ?
+    - J'aimerais réserver pour [12](nombre) personnes
+    - Pour un groupe de [7](nombre), est-ce possible ?
+    - Nous serons [9](nombre) à diner
+    - Réservez une table pour [11](nombre) personnes
+    - Est-ce possible pour [15](nombre) personnes ?
+    - Nous serons [20](nombre) à table
+    - Réservez pour [14](nombre) personnes
+    - Je voudrais une réservation pour [18](nombre) personnes
+    - Est-ce possible pour [13](nombre) personnes ?
+    - Nous serons [16](nombre) à table
+    - Nous sommes [17](nombre) personnes
+    - Pour [25](nombre) personnes, c'est libre ?
 
 - intent: nom_reservation
   examples: |
     - C'est pour [Jean Dupont](nom)
+    - La réservation est au nom de [Marie Leclerc](nom)
+    - Réservez à [Pierre Martin](nom)
+    - Au nom de [Alice Dubois](nom)
+    - Je réserve pour [David Moreau](nom)
+    - C'est sous le nom de [Sophie Leroux](nom)
+    - Réservez à [Lucie Bernard](nom)
+    - La réservation est à [Michel Durand](nom)
+    - C'est pour [Antoine Lefevre](nom)
+    - Réservez sous [Caroline Blanchard](nom)
+    - La réservation est faite au nom de [Bernard Jacques](nom)
+    - Pour [Jacques Renault](nom)
+    - C'est sous le nom de [Isabelle Lefevre](nom)
+    - Réservez à [Patrick Simon](nom)
+    - Au nom de [Juliette Caron](nom)
+    - C'est pour [Thierry Deschamps](nom)
+    - La réservation est pour [Emma Dupuis](nom)
+    - Réservez au nom de [Lucas Gauthier](nom)
+    - La réservation est sous [Pauline Lefevre](nom)
+    - C'est au nom de [Maxime Mercier](nom)
 
 - intent: numero_de_telephone
   examples: |
     - Le numéro est le [0123456789](telephone)
+    - Mon numéro est le [0987654321](telephone)
+    - Tu peux me joindre au [0612345678](telephone)
+    - Mon numéro de téléphone est le [0745678901](telephone)
+    - C'est le [0356789012](telephone)
+    - Mon téléphone est le [0567890123](telephone)
+    - Je vous contacte au [0712345678](telephone)
+    - Tu peux m'appeler au [0698765432](telephone)
+    - Mon numéro est [0212345678](telephone)
+    - Je suis joignable au [0123456789](telephone)
+    - Appelle-moi au [0908765432](telephone)
+    - Mon numéro est [0687349821](telephone)
+    - Tu peux me joindre au [0556457890](telephone)
+    - Mon téléphone est [0634567890](telephone)
+    - Le numéro de contact est [0476589231](telephone)
+    - Tu peux me contacter au [0567893456](telephone)
+    - Je suis disponible au [0512345678](telephone)
+    - Contacte-moi au [0745670987](telephone)
+    - Mon numéro est [0665329781](telephone)
 
 - intent: annuler_reservation
   examples: |
