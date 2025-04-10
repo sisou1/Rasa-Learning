@@ -75,15 +75,9 @@ responses:
 
   utter_demande_num:
     - text: "Quel est votre numéro de téléphone ?"
-
-  utter_code_reservation:
-    - text: "Votre code de réservation est : {booking_number}"
-
-  utter_annulation_confirmation:
-    - text: "Votre réservation a bien été annulée."
-
-  utter_modification_confirmation:
-    - text: "Votre réservation a bien été modifiée."
+  
+  utter_non:
+    - text: "huh ?"
 
 actions:
   - action_obtenir_allergenes
@@ -92,3 +86,8 @@ actions:
   - action_reservation
   - action_annuler_reservation
   - action_modifier_reservation
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

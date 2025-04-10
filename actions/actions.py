@@ -3,8 +3,11 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
 import random
+from rasa_sdk.events import SlotSet
 
 DB_PATH = "actions/restaurant.db"
+
+MAX_CAPACITY = 25
 
 class ActionObtenirAllergenes(Action):
     def name(self) -> Text:
@@ -75,18 +78,20 @@ class ActionVerification(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        date = tracker.get_slot("date")
-        nombre = tracker.get_slot("nombre")
-        nom = tracker.get_slot("nom")
-        telephone = tracker.get_slot("telephone")
+        date = tracker.get_slot("date_reservation")
+        nombre = tracker.get_slot("nombre_personne")
 
-        if not all([date, nombre, nom, telephone]):
-            dispatcher.utter_message(text="Il manque des informations pour valider la réservation.")
-        else:
-            booking_number = f"RES{random.randint(1000, 9999)}"
-            tracker.slots["booking_number"] = booking_number
-            dispatcher.utter_message(text=f"Votre réservation pour le {date} pour {nombre} personnes est confirmée. Votre code de réservation est : {booking_number}")
+        try:
+            nombre = int(nombre)
+        except (TypeError, ValueError):
+            dispatcher.utter_message(text="Je n'ai pas compris le nombre de personnes.")
+            return []
 
+        if nombre > MAX_CAPACITY:
+            dispatcher.utter_message(text=f"Désolé, nous ne pouvons accueillir que {MAX_CAPACITY} personnes au maximum.")
+            return []
+
+        dispatcher.utter_message(text=f"Donc, pour le {date} pour {nombre} personnes, c’est bien ça ?")
         return []
 
 class ActionReservation(Action):
@@ -97,8 +102,24 @@ class ActionReservation(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # Logique pour enregistrer la réservation dans la base de données
-        return []
+        date = tracker.get_slot("date_reservation")
+        nombre = tracker.get_slot("nombre_personne")
+        nom = tracker.get_slot("nom_reservation")
+        telephone = tracker.get_slot("numero_de_telephone")
+
+        # Génération du code
+        booking_number = f"RES{random.randint(1000, 9999)}"
+
+        # Ici tu pourrais ajouter l'enregistrement en base
+        # Exemple: db.save_reservation(...)
+
+        dispatcher.utter_message(
+            text=f"Merci {nom}. Votre réservation pour le {date} pour {nombre} personnes a été enregistrée.\n"
+                 f"Nous vous contacterons au {telephone} si besoin.\n"
+                 f"Voici votre code de réservation : {booking_number}"
+        )
+
+        return [SlotSet("code_reservation", booking_number)]
 
 class ActionAnnulerReservation(Action):
     def name(self) -> Text:

@@ -1,6 +1,11 @@
 version: "3.1"
 
 rules:
+  - rule: un non ?
+    steps:
+      - intent: negation
+      - action: utter_non
+
   - rule: Dire au revoir lorsque l'utilisateur dit au revoir
     steps:
       - intent: au_revoir
@@ -15,3 +20,28 @@ rules:
     steps:
       - intent: demander_menu_du_jour
       - action: action_obtenir_menu_du_jour
+
+  - rule: Renseigner la date de réservation
+    steps:
+      - intent: date_reservation
+      - action: utter_demande_nombre
+      
+  - rule: Renseigner le nombre de personnes
+    steps:
+      - intent: nombre_personne
+      - action: action_verification
+
+  - rule: Confirmer la réservation
+    steps:
+      - intent: affirmation
+      - action: utter_demande_nom
+
+  - rule: Renseigner le nom
+    steps:
+      - intent: nom_reservation
+      - action: utter_demande_num
+
+  - rule: Finaliser la réservation après le numéro de téléphone
+    steps:
+      - intent: numero_de_telephone
+      - action: action_reservation

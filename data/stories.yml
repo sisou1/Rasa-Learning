@@ -22,7 +22,6 @@ stories:
       - action: utter_demande_num
       - intent: numero_de_telephone
       - action: action_reservation
-      - action: utter_code_reservation
 
   - story: Annuler une réservation
     steps:
