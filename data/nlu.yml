@@ -201,9 +201,31 @@ nlu:
     - Je ne peux plus venir, annulez la réservation
     - Supprimez ma réservation
 
-- intent: modifier_reservation
+- intent: voir_reservation
   examples: |
-    - Je voudrais modifier ma réservation
-    - Modifiez ma réservation
-    - Changez la date de ma réservation
-    - Je souhaite changer le nombre de personnes
+    - je veux voir ma réservation
+    - puis-je consulter ma réservation ?
+    - j'aimerais voir ma réservation
+    - montrer ma réservation
+    - consulter ma réservation
+    - info réservation
+    - information sur ma réservation
+    - information sur réservation
+
+- intent: code_reservation
+  examples: |
+    - mon code est [RES1234](code_reservation)
+    - j'ai reçu le code [RES5678](code_reservation)
+    - voici mon code : [RES9012](code_reservation)
+    - [RES3456](code_reservation)
+    - [RES7890](code_reservation)
+    - le code est [RES1111](code_reservation)
+    - mon numéro de réservation est [RES2222](code_reservation)
+    - code : [RES3333](code_reservation)
+    - [RES4444](code_reservation)
+    - [RES5555](code_reservation)
+    - je te donne mon code : [RES6666](code_reservation)
+    - réservation [RES7777](code_reservation)
+    - [RES8888](code_reservation) c’est bon ?
+    - j’ai ça : [RES9999](code_reservation)
+    - on m’a donné ce code : [RES0001](code_reservation)

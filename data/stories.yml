@@ -23,12 +23,9 @@ stories:
       - intent: numero_de_telephone
       - action: action_reservation
 
-  - story: Annuler une réservation
+  - story: Voir une reservation
     steps:
-      - intent: annuler_reservation
-      - action: action_annuler_reservation
-
-  - story: Modifier une réservation
-    steps:
-      - intent: modifier_reservation
-      - action: action_modifier_reservation
+      - intent: voir_reservation
+      - action: utter_demande_code
+      - intent: code_reservation
+      - action: action_afficher_reservation

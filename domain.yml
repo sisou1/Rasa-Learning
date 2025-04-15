@@ -14,7 +14,8 @@ intents:
   - nom_reservation
   - numero_de_telephone
   - annuler_reservation
-  - modifier_reservation
+  - voir_reservation
+  - code_reservation
 
 entities:
   - date
@@ -71,7 +72,7 @@ responses:
     - text: "Combien de personnes seront présentes ?"
 
   utter_demande_nom:
-    - text: "Quel est votre nom ?"
+    - text: "Quel est votre nom de famille ?"
 
   utter_demande_num:
     - text: "Quel est votre numéro de téléphone ?"
@@ -79,13 +80,16 @@ responses:
   utter_non:
     - text: "huh ?"
 
+  utter_demande_code:
+    - text: "Quel est votre code de réservation ?"
+
 actions:
   - action_obtenir_allergenes
   - action_obtenir_menu_du_jour
   - action_verification
   - action_reservation
   - action_annuler_reservation
-  - action_modifier_reservation
+  - action_afficher_reservation
 
 
 session_config:

@@ -45,3 +45,13 @@ rules:
     steps:
       - intent: numero_de_telephone
       - action: action_reservation
+
+  - rule: Voir une réservation
+    steps:
+      - intent: voir_reservation
+      - action: utter_demande_code
+
+  - rule: Afficher réservation après code
+    steps:
+      - intent: code_reservation
+      - action: action_afficher_reservation
